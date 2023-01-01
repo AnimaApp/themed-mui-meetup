@@ -105,7 +105,7 @@
       "type": "color"
     },
     "shadow": {
-      "value": "box-shadow: 0px 4px 10px 0px rgba(76, 132, 255, 0.4)",
+      "value": "box-shadow: 0px 4px 10px 0px",
       "type": "shadow"
     },
     "token": {

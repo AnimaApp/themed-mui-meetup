@@ -51,25 +51,29 @@ export const theme = createTheme({
           }
           overrides["color"] = "white";
           console.log(ownerState);
-          if (ownerState.disabled) {
+          if (ownerState.state === 'disabled') {
             overrides["color"] = 'rgba(28, 47, 73, 0.2)';
             overrides["backgroundColor"] = 'rgba(76, 132, 255, 0.05)';
+            overrides["boxShadow"] = "none";
           } else {
             overrides["backgroundColor"] =
               daisy[`${ownerState.color}_${ownerState.state}`].value;
-            overrides["boxShadow"] = "0px 4px 10px 0px rgba(76, 132, 255, 0.4)";
+            overrides["boxShadow"] = `0px 4px 10px 0px ${daisy[`${ownerState.color}_${ownerState.state}`].value}`;
+
+            overrides["&:hover"] = {
+              backgroundColor: daisy[`${ownerState.color}_hover`].value,
+              boxShadow: `0px 4px 10px 0px ${daisy[`${ownerState.color}_hover`].value}`
+            }
+            overrides["&:active"] = {
+              backgroundColor: daisy[`${ownerState.color}_active`].value,
+              boxShadow: `0px 4px 10px 0px ${daisy[`${ownerState.color}_active`].value}`
+            }
           }
-          overrides["&:hover"] = {
-            backgroundColor: daisy[`${ownerState.color}_hover`].value,
-            boxShadow: "0px 4px 10px 0px rgba(76, 132, 255, 0.4)"
-          }
-          overrides["&:active"] = {
-            backgroundColor: daisy[`${ownerState.color}_active`].value,
-            boxShadow: "0px 4px 10px 0px rgba(76, 132, 255, 0.4)"
-          }
+          
           overrides["&:disabled"] = {
             color: 'rgba(28, 47, 73, 0.2)',
-            backgroundColor: 'rgba(76, 132, 255, 0.05)'
+            backgroundColor: 'rgba(76, 132, 255, 0.05)',
+            boxShadow: "none"
           }
           return overrides;
         },

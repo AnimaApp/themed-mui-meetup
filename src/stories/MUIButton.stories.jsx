@@ -7,7 +7,7 @@ export default {
   component: Button,
   argTypes: {
     state: {
-      control: { type: "select", options: ["default", "hover", "active"] },
+      control: { type: "select", options: ["default", "hover", "active", "disabled"] },
     },
     color: {
       control: {
@@ -19,10 +19,9 @@ export default {
       control: { type: "select", options: ["small", "medium"] },
     },
     leftIcon: { control: "text" },
-    rightIcon: { control: "text" },
+   // rightIcon: { control: "text" },
     showLeftIcon: { control: "boolean" },
-    showRightIcon: { control: "boolean" },
-    disabled: { control: "boolean" },
+   // showRightIcon: { control: "boolean" },
   },
 };
 
@@ -101,9 +100,8 @@ MuiButton.args = {
   state: "default",
   size: "medium",
   color: "primary",
-  disabled: false,
   showLeftIcon: false,
-  showRightIcon: false,
+  //showRightIcon: false,
   leftIcon: "star",
-  rightIcon: "star",
+  //rightIcon: "star",
 };

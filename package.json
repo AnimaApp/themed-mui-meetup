@@ -7,6 +7,8 @@
     "@atlaskit/pagination": "^14.1.6",
     "@emotion/react": "^11.8.1",
     "@emotion/styled": "^11.8.1",
+    "@material-ui/icons": "^4.11.3",
+    "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.4.4",
     "@nextui-org/react": "^1.0.2-beta.4",
     "@testing-library/jest-dom": "^5.16.1",
